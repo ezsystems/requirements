@@ -1,0 +1,10 @@
+; Top-Most EditorConfig File
+root = true
+
+; Unix-Style newlines
+[*]
+end_of_line = LF
+
+[*.md]
+indent_style = space
+indent_size = 2
