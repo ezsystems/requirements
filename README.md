@@ -8,8 +8,8 @@ Word Docs, BDD, RAML... :)
 ## Take a Look Around
 
 There are only a few files here while we ramp up this new approach (this
-  repository was born on February 8, 2017). The `v2.0` branch is where you'll
-  find most of our initial activity, PRs, and discussion:
+repository was born on February 8, 2017). The `v2.0` branch is where you'll
+find most of our initial activity, PRs, and discussion:
 
 https://github.com/ezsystems/specs/tree/v2.0
 
@@ -37,7 +37,7 @@ Do you have some ideas you'd like to contribute to these requirements? It's
 easy! Simply fork this repository to your own GitHub account, checkout the
 branch you want to work with (e.g., `git checkout v2.0`), then make your own
 branch (with a useful and informative name, e.g.
-`git checkout -b v2.0/feature/udw-suggestions`) from that.
+`git checkout -b v2/feature/udw-suggestions`) from that.
 
 Make any changes or additions you'd like to propose, add, and commit. Push to
 your fork, then send a Pull Request back here to the branch you're targeting
@@ -59,17 +59,50 @@ specifications for v2.0, you would make _your_ branch _based on_ this
 repository's v2.0 branch: https://github.com/ezsystems/requirements/tree/v2.0
 and send your PRs there.
 
+Git doesn't like naming branches with the same starting name as an existing
+branch, so you'll notice the recommendation that you use `v2/*` instead of
+something like `v2.0/*`. That also fits well with our use of semantic versioning
+as the feature should be aimed at a major version, not a minor or patch.
+
 ### Naming your working branch
 
 Your Pull Request will show that it comes from your fork, so you don't need to
 add your name or initials to the branch. Try to give it a name that describes
 what you're working on. For example, one might create a branch called
-`v2.0/feature/raml` or `v2.0/feature/rest-api-improvements` if one wanted to
+`v2/feature/raml` or `v2/feature/rest-api-improvements` if one wanted to
 contribute requirements for implementing the use of RAML with our REST API. The
 files would probably make sense in the `/eZ Platform/APIs/REST/` folder. When
 you send your PR, we'll help you make sure it is aimed at the right branch
 (v2.0, the one you created yours from), and then everyone can review and comment
 to discuss.
+
+## What's a requirement? What's a specification?
+This `requirements` repository is meant to hold, well, requirements. This means
+providing a detailed description of what the product *must*, _should_, and may
+do.
+
+Here's a made-up, entirely fictional example:
+
+We could say a feature *must* demonstrate the ability to log in using your
+GitHub account. We could say that feature _should_ check whether your login is
+also associated with a Twitter-based login. We might say that the feature may
+offer to use your GitHub profile picture or specify to use your Gravitar.
+
+Specific language such as Gherkin may be used.
+
+The goal of requirements is to specify _what_ must be done, and _why_.
+
+Once Engineers (including you, if you're working on a contribution) are ready to
+get into detailed technical specifications, a much more detailed plan is needed
+to specify _how_ things will be done, and _where_.
+
+Requirements live here, in this repository.
+
+Specifications live in the working repository for the product or feature:
+
+- https://github.com/ezsystems/ezpublish-kernel/tree/master/doc/specifications
+- https://github.com/ezsystems/ezplatform/tree/master/doc
+- https://github.com/ezsystems/PlatformUIBundle/tree/master/docs
 
 ### Editing Your Files
 
