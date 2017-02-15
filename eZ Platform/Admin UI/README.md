@@ -18,7 +18,7 @@ The underlying main goals are:
   reuse is not possible, expectations and plans for 2.x will have to be
   re-adjusted.
 
-## Definitions
+### Definitions
 - "Hybrid Approach": A Multi-Page App (MPA) approach, replacing current SPA
   - Uses Symfony routing, and ensures that we can have an application URL that
     can use Content IDs, Location IDs, Content Fields (name)
@@ -26,7 +26,30 @@ The underlying main goals are:
   - Includes JavaScript enhancements utilizing modern framework(s) &
     librar(y/ies)
 
-## Firm
+### Use Cases
+
+#### Stories
+
+##### As a developer I want to simply reuse Admin Panel functionalities present in 1.x
+- ex: content type view
+
+##### As a developer I want to simply reuse existing YUI-based modules present in 1.x
+- ex1: universal discovery widget
+- ex2: landing page editor
+- ex3: sub-item views in the repository
+
+##### As a developer I want to extend the hybrid app with a React-based module.
+- ex: a module in a tab in the content repository that would deal specifically with content
+
+##### As a developer I want to extend the hybrid app with a Polymer-based module.
+- ex: a module in a main tab or sub tab of the app navigation
+
+##### As a developer I want to extend the hybrid app with a Angular-based application
+- ex: a module on the dashboard
+
+## Requirements:
+
+### Firm
 Prototype *must*:
 - Demonstrate routing in Symfony3
 - Demonstrate PHP API usage in Symfony3
@@ -34,18 +57,18 @@ Prototype *must*:
 - Demonstrate re-use of an existing non-YUI component such as Content Type View
   (which is Symfony based)
 
-## Preferred
+### Preferred
 Prototype _should_:
 - Demonstrate use of a non-YUI JavaScript enhancement within Admin UI
 - Use the Universal Discovery Widget as the test subject to Demonstrate re-use
   of existing YUI component within new solution
 
-## Bonus
+### Bonus
 Prototype may:
 - Demonstrate encapsulation of existing YUI elements, as well as others, in
   webcomponents if practical.
 
-## Exclusions
+### Exclusions
 Prototype *must not*:
 - Rely on YUI for Admin UI
 
