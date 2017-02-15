@@ -11,7 +11,7 @@ There are only a few files here while we ramp up this new approach (this
 repository was born on February 8, 2017). The `v2.0` branch is where you'll
 find most of our initial activity, PRs, and discussion:
 
-https://github.com/ezsystems/specs/tree/v2.0
+https://github.com/ezsystems/requirements/tree/v2.0
 
 ### What are all these empty folders?
 
