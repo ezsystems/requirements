@@ -1,5 +1,9 @@
 # v2: Symfony/JS Hybrid Prototype: Admin UI Requirements
 
+We will create a prototype to answer some questions about what a hybrid solution
+will look like. The main point of the hybrid is to make it as simple as possible
+to use any frontend tech.
+
 ## Prototype Objective
 "As an eZ Engineer, I want...
 
