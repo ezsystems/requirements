@@ -1,4 +1,4 @@
-# v2: Symfony 3 Hybrid Prototype: Admin UI Requirements
+# v2: Symfony/JS Hybrid Prototype: Admin UI Requirements
 
 ## Prototype Objective
 "As an eZ Engineer, I want...
@@ -12,6 +12,9 @@ The underlying main goals are:
 - By adopting Symfony 3, we will provide developers (especially the ones who are
   experienced with eZ Publish or Symfony) a substantially faster and easier way
   to develop, extend, and customize eZ Platform.
+- The core of the Admin UI will be in Symfony, with server side routes, etc. It
+  will be part of a hybrid architecture that will facilitate the embedding of
+  rich frontend modules that can communicate with the server and between each other.
 - By ensuring a hybrid architecture that reuses existing elements relying on
   YUI, we will speed up availability of 2.x by not having to re-develop all
   features. Candidates for reuse are UDW, Sub-Items View, Content views. If this
