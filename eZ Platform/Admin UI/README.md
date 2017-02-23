@@ -7,13 +7,13 @@ to use any frontend tech.
 ## Prototype Objective
 "As an eZ Engineer, I want...
 
-To create a functioning, experimental combination of Symfony3, eZ Platform, and
+To create a functioning, experimental combination of Symfony, eZ Platform, and
 a mix of existing elements (in YUI) and rewritten elements (in a new framework),
 for the purpose of research and development (prototype), so that I can get a
 better picture of how such a hybrid approach may work."
 
 The underlying main goals are:
-- By adopting Symfony 3, we will provide developers (especially the ones who are
+- By adopting Symfony, we will provide developers (especially the ones who are
   experienced with eZ Publish or Symfony) a substantially faster and easier way
   to develop, extend, and customize eZ Platform.
 - The core of the Admin UI will be in Symfony, with server side routes, etc. It
@@ -58,8 +58,8 @@ The underlying main goals are:
 
 ### Firm
 Prototype *must*:
-- Demonstrate routing in Symfony3
-- Demonstrate PHP API usage in Symfony3
+- Demonstrate routing in Symfony
+- Demonstrate PHP API usage in Symfony
 - Demonstrate re-use of at least one existing YUI component within new solution
 - Demonstrate re-use of an existing non-YUI component such as Content Type View
   (which is Symfony based)
