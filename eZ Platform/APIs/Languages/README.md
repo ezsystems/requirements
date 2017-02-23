@@ -32,12 +32,11 @@ The feature MUST:
     helpers on top would later pick anyway, so we need to make sure the helpers will still work with only one language.
 - Use languages arguments as a priority list consistently across the API, as is the case with search today
 - Automatically inject the list of SiteAccess defined languages unless developer provided one specifically
-zoom
 
 ## Preferred
 The feature SHOULD:
 - Provide a way for the 1% use case to be able to easily adopt to still work:
-  - If languages are not specified and developer inteded to load all languages for further processing, this should still
+  - If languages are not specified and developer intended to load all languages for further processing, this should still
     be possible somehow
 - Be consistent across all the different API entities and Services in Repository API
 - **v1:** Features being added as part of this change should be done in v1, and the change in behaviour should be done
@@ -50,21 +49,20 @@ The feature MAY:
 
 
 ## Open Question:
-In the case where Editor A. selects a given language to edit a given entity, and/or B. language for user interface.
-Should this affect language priority when code calls are made to the API? Hence on what is being displayed?
+In the case where A. an editor select a given contextual language to edit a given entity (e.g. a content object)
+and/or
+the case where B. an editor select a language for the user interface (e.g. languages of the menus)
 
-Clarification:
-A: In this case it is clear language user picks should be specified on calls to API on the entity editor works with,
-   the open question here is if should also have an effect on other entities being displayed in the UI: content relations,
-   sections, content type info, ..., aka would this be a global context added to language priority or contextual only on
-   the given entity, and then on a case by case basis taken into account by UI code itself _(like if we expose content
-   relation editing, e.g. in UDW creation use case, cascading this language choice would make sense)_
+Should this affect language **global** priority when API calls are made for _(A: other)_ entities?
+
+Example:
+ Given I am a Editor
+ When I edit Content in language fre-FR
+ I expect to see relations and items in UDW in language taken from Z << ??
+
 
 Suggestion, updated requirements above to reflect:
-- Case A should be left as UI logic to determine where it cascades the user selected language context, hence go under
-  behaviour defined for when API user (UI) specifies the language to get translation in.
+- Case A should be left up to UI if language when editing entity X, should also affect loading of entity Y
+  So this behavour will not be defined here, as it will be defined when needed on a given specific UI behaviour.
 - Case B should be injected into the language priority logic, so the user specified UI language will also reflect on
-  the entities being disabled by default.
-
-
-TODO: Define psudo BDD to better define the edge cases of the expected behaviour here.
+  the entities being displayed by default, hence Platform UI takes "Z" from this selection instead of using config.
