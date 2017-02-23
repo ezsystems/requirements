@@ -12,8 +12,8 @@ The underlying goals are:
 
 ## Firm requirements
 
-- The solution should enable CRUD operations on fields in the exact same way, in both eZ Platform UI (cf. Hybrid application prototype), and in any website directly powered by eZ Platform Web Framework (as opposed to a decoupled website, simply using eZ Platform APIs)
-- The solution should enable CRUD operations on fields in a remote website / web application (in any programming language) using the REST API, and should minimize the UI logic that will have to be implemented for that (e.g. moving as much as possible of the UI logic in the APIs, such as validation rules, etc., or exposing the Web UI through the API)
+- The solution must enable CRUD operations on fields in the exact same way, in both eZ Platform UI (cf. Hybrid application prototype), and in any website directly powered by eZ Platform Web Framework (as opposed to a decoupled website, simply using eZ Platform APIs)
+- The solution must enable CRUD operations on fields in a remote website / web application (in any programming language) using the REST API, and should minimize the UI logic that will have to be implemented for that (e.g. moving as much as possible of the UI logic in the APIs, such as validation rules, etc., or exposing the Web UI through the API)
 
 ## Preferred requirements
 
@@ -28,7 +28,6 @@ Other approaches (either complementary or alternative) might be good candidates 
 - Exposing part of the UI via REST API calls (answers the 2nd requirement)
 - Using webcomponents instead of pure Twig-based UI (answers the 1st and 2nd requirements and reduces dependencies on Symfony for the future)
 - Evolving repository-form: based on repository forms, but adding additional capabilities to better define UI behaviors in the API
-...?
 
 ## Outcome
 
