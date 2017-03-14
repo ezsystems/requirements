@@ -17,7 +17,6 @@ As a front-end developer I would like to:
 * Manage the content via the REST API:
     * Use the REST endpoints to quickly create a new object
     * Use the REST endpoints to quickly update an already created object
-    * Use the REST endpoint
 
 # Creating content POST
 The create content endpoint should be simplified to default most values and the simplest possible.
@@ -25,27 +24,35 @@ The create content endpoint should be simplified to default most values and the 
 This call should create:
 * A new content object (not a draft) and publish
 * Assign ownership to the current user
-* Create the object in the default language
+* Create the object in the default language if not set
 * Location can be defined either with ID or URL
 
 ## Example: creating a new object
 
-```
-Resource: /content/object
-Method: POST
+__Resource__: _/content/object_
+
+__Accept__: _application/vnd.ez.api.Content+json_
+
+__Content-Type__: _application/vnd.ez.api.SimpleContentCreate+json_
+
+__Method__: _POST_
+
+__Body__:
+```json
 {
-    "content-location": "/blogs",
-	"content-type": "blog_post",
+    "ParentLocation": <ID> or <URL>,
+	"contentType": <CONTENT_TYPE_IDENTIFIER>,
 	"fields": {
 		"title": "My blog title",
 		"author": "Bård Farstad",
 		"body": "Body text, ideally simple but also with <b>formatting</b>. Perhaps supporting simple form and docbook.",
 		"image": "/path/to/image.jpg"
-		}
+	}
 }
+```
 
-Return:
-HTTP/1.1 201 Created
+__Return__: _HTTP/1.1 201 Created_
+```json
 Location: /content/object/<newID>
 ```
 
@@ -55,87 +62,73 @@ Fetching an object by location. Location can be either a location ID (42) or a r
 
 ## Example: fetching an object
 
-```
-Resource: /content/object/(location_id)
-Method: GET
+__Resource__: _/content/object/<LOCATION_ID>_
 
-Return:
-HTTP/1.1 200 Success
+__Method__: _GET_
+
+__Return__: _HTTP/1.1 200 Success_
+```json
 {
     TODO: add default fields: id, published, modified, version, language etc.
     "content-location": "/blogs",
-	"content-type": "blog_post",
+    "content-type": "blog_post",
     "content-type-name": "Blog Post",
-	"fields": {
-		"title": "My blog title",
-		"author": "Bård Farstad",
-		"body": "Body text, ideally simple but also with <b>formatting</b>. Perhaps supporting simple form and docbook.",
-		"image": "/path/to/image.jpg"
-		}
+    "fields": {
+        "title": "My blog title",
+        "author": "Bård Farstad",
+        "body": "Body text, ideally simple but also with <b>formatting</b>. Perhaps supporting simple form and docbook.",
+        "image": "/path/to/image.jpg"
+        }
 }
 ```
-# Updating content PUT
+OR
+__Return__: _HTTP/1.1 404 Not found_
 
-The following call updates the complete object.
-
-## Example: updating an object
-
-```
-Resource: /content/object/(location_id)
-Method: PUT
-{
-	"fields": {
-		"title": "My Updated title",
-		"author": "Bård Farstad",
-		"body": "Body text, ideally simple but also with <b>formatting</b>. Perhaps supporting simple form and docbook.",
-		"image": "/path/to/image.jpg"
-		}
-}
-
-Return:
-HTTP/1.1 200 Success
-HTTP/1.1 404 Not found
-
-```
 # Patching content PATCH
 
-The following call patches an object and updates only the defined fields.
+The following call patches an object and updates complete object or the defined fields only.
+
+## Example: object's full update
+
+__Resource__: _/content/object/<LOCATION_ID>_
+
+__Method__: _PATCH_
+
+__Body__:
+```json
+{
+    "fields": {
+        "title": "My Updated title",
+        "author": "Bård Farstad",
+        "body": "Body text, ideally simple but also with <b>formatting</b>. Perhaps supporting simple form and docbook.",
+        "image": "/path/to/image.jpg"
+        }
+}
+```
+
+__Return__: _HTTP/1.1 200 Success_ OR _HTTP/1.1 404 Not found_
 
 ## Example: partially updating an object
 
-```
-Resource: /content/object/(location_id)
-Method: PATCH
+__Resource__: _/content/object/<LOCATION_ID>_
+
+__Method__: _PATCH_
+
+__Body__:
+```json
 {
-	"fields": {
-		"title": "My second update to the title",
-		}
+    "fields": {
+        "title": "My Updated title",
+    }
 }
-
-Return:
-HTTP/1.1 200 Success
-HTTP/1.1 404 Not found
-
 ```
+
+__Return__: _HTTP/1.1 200 Success_ OR _HTTP/1.1 404 Not found_
+
 # Deleting content DELETE
 
-The following call removes the current content item.
-
-## Example: partially updating an object
-
-```
-Resource: /content/object/(location_id)
-Method: DELETE
-
-
-Return:
-HTTP/1.1 200 Success
-HTTP/1.1 404 Not found
-
-```
+Same as current REST API behaviour.
 
 ## Field types
 
 TODO: define the interface for the currently available field types to create and update/create.
-
-TODO: define how to implement a new field type that has a simplified interface.
