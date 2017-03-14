@@ -41,7 +41,7 @@ __Body__:
 ```json
 {
     "ParentLocation": <ID> or <URL>,
-	"contentType": <CONTENT_TYPE_IDENTIFIE>,
+	"contentType": <CONTENT_TYPE_IDENTIFIER>,
 	"fields": {
 		"title": "My blog title",
 		"author": "Bård Farstad",
