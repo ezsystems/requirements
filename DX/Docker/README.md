@@ -16,7 +16,6 @@ server environment that can easily be adapted to own needs.
 - to work on several projects at once with separated environments
 - to work with standard industry tools for describing environments and deployment
 
-
 #### Sub goals
 - Some of the use cases above reflects aspects of [12factor](https://12factor.net/):
   - Server configuration checked in with the code so it can be versioned
@@ -29,7 +28,10 @@ server environment that can easily be adapted to own needs.
 - As an eZ Engineer, I want _(like eZ Developers)_ to get quickly up and running and share environment configuration with team
 - As an eZ QA Engineer, I want to able to easily re-configure blueprint for testing different supported environments
 - As an eZ Support Engineer, I want to be able to re-configure blueprint to replicate customer environments
-
+- As an eZ PM, I want  a demo images continuously built with latest versions using same blue prints
+  - Would need all features, so for instance Solr for Faceting
+- As as eZ PS, I want to reuse same systems for training and demo use
+  - Would need same needs as eZ Developer to customize the content of the image easily
 
 
 ## M1: Docker and Docker-compose configuration in Git
@@ -71,10 +73,10 @@ The feature SHOULD:
 
 ### Bonus
 The feature MAY:
-- Be able to deploy also to Platform.sh using as much as the same tools as possible
+- Find ways to reuse parts of Docker configuration with Platform.sh configuration, and try to keep them somewhat in sync
 
 
-## M3: Migration for database and binary content
+## M3: Migration for database and binary content for Deployments
 
 ### Firm
 The feature MUST:
@@ -83,3 +85,7 @@ The feature MUST:
 ### Preferred
 The feature SHOULD:
 - Needs to be able to do this operation from dev to prod, and from prod back to dev
+
+
+Todo:
+- Consider splitting this up into 2-3 requirements to avodi milestone reference
