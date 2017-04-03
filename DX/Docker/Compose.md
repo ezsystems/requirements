@@ -20,13 +20,13 @@ The feature MUST:
 The feature SHOULD:
 1. Be able to reconfigure eZ Platform via environment variables for all possible
   server configurations, such as:
-  1. Single/cluster setup
-  1. Cache using fs/memcached/redis
-  1. Database using mysql/postgres
-  1. Storage using fs/nfs/s3/..
-  1. Search engine using db/solr/es
-  1. Http cache using Symfony or Varnish
-  1. Session stored on disk or in shared backend like memcached/redis/db
+    1. Single/cluster setup
+    1. Cache using fs/memcached/redis
+    1. Database using mysql/postgres
+    1. Storage using fs/nfs/s3/..
+    1. Search engine using db/solr/es
+    1. Http cache using Symfony or Varnish
+    1. Session stored on disk or in shared backend like memcached/redis/db
 1. Be able to initiate with a database and binary dump
 
 ### Bonus
