@@ -1,4 +1,4 @@
-# About this folder
+# Command Line Interface Commands
 
 This is the Requirements repository for eZ Platform.
 

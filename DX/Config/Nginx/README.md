@@ -1,7 +1,10 @@
-# About this folder
+# The Nginx Web Server
 
-This is the Requirements & Specifications repository for eZ Platform.
+eZ Supports Nginx:
+https://github.com/ezsystems/ezplatform/tree/master/doc/nginx
 
-https://github.com/ezsystems/specs
+This is the Requirements repository for eZ Platform.
+
+https://github.com/ezsystems/requirements
 
 https://ezplatform.com/

@@ -1,7 +1,7 @@
-# About this folder
+# Accessibility (a11y)
 
-This is the Requirements & Specifications repository for eZ Platform.
+This is the Requirements repository for eZ Platform.
 
-https://github.com/ezsystems/specs
+https://github.com/ezsystems/requirements
 
 https://ezplatform.com/
