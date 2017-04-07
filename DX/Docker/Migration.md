@@ -11,6 +11,7 @@ As a Developer, I want...
 1. ...to share database schema changes with my team
 1. ...to migrate production from the old schema to the new one
 1. ...to enjoy identical environments between developers, staging, and production
+1. ...to optimize the size of my DB
 
 ## Migration Solution Requirements
 
@@ -23,6 +24,7 @@ The feature MUST:
 ### Preferred
 The feature SHOULD:
 1. Be able to do this operation from dev to prod, and from prod back to dev
+1. Be able to forward ENV variables to the desired app
 
 ### Bonus
 The feature MAY:

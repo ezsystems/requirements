@@ -1,7 +1,7 @@
 # v2: Docker Compose Requirements
 
 ## Objective
-To provide a default Docker Compose file or files, ready to use out-of-the-box.
+To provide default Dockerfiles and Docker Compose  or files, ready to use out-of-the-box.
 
 https://docs.docker.com/compose/overview/
 

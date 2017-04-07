@@ -32,8 +32,8 @@ out-of-the-box, composed as a pre-configured group of containers, or set up to
 cluster and scale, there are numerous entry points into implementation of these
 options. For eZ Platform, we will begin with a focus on the following:
 
-1. Development / Staging / Production containers, composed by eZ and editable by
-  developers to suite their needs.
+1. Development / Staging / Production images, composed by eZ and editable by
+  developers via Dockerfiles and Docker-Compose files to suit their needs.
 1. Deployment, to address the Production element in greater detail
 1. Migration, to facilitate common activities with database management
 1. CLI Wrapping, to take the edge off of some of the more complex CLI commands
