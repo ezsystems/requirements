@@ -19,8 +19,8 @@ of environment.
 
 ### Firm
 The solution MUST:
-1. Run _inside_ of a Docker container, to unify environments across all systems,
-  and thus equally usable on Unix, Linux, Windows, and macOS machines.
+1. Be implemented as a PHP command line tool with very minimum requirements on PHP (5.6+ and Open SSL but no other specific module) to achieve a good portability of the solution
+1. Provide simple work around for users who don't have PHP installed.
 1. Run _only_ when non-destructive tasks are verified by safety checks in the
   code, or destructive tasks are confirmed by the user on the CLI with a YES/no
 1. Implement _best practices_ as generally accepted and recommended by the
@@ -30,15 +30,17 @@ The solution MUST:
   README.md).
 1. Be modular, following the UNIX approach to piping collections of commands, in
   which each command _does one thing_.
-1. Keep and expose logs to the developer
+1. Keep and expose logs to the developer.
+1. Enable developers to automatically send logs to a log service.
 
 ### Preferred
 The solution SHOULD:
 1. Be _fast_
-1. Utilize a numbered menu of common activities for guided selection
-1. Be capable of reporting errors back to eZ when they occur
-1. Be self-documenting
-1. Allow for custom configuration of the tool itself, and sharing of that config
+1. Provide a way to run the solution with Docker as a single requirement (removing the PHP requirement) by for instance providing a simple Docker image on Docker Hub that would contain the wrapper and makes it usable from that container.
+1. Utilize a numbered menu of common activities for guided selection.
+1. Be capable of reporting errors back to eZ when they occur.
+1. Be self-documenting.
+1. Allow for custom configuration of the tool itself, and sharing of that config.
 
 ### Bonus
 The solution MAY:
@@ -46,5 +48,4 @@ The solution MAY:
   of Docker), so long as the primary requirement is only to have a working
   Docker install on a given machine (e.g., a Docker container may run code
   inside the container that modifies the host with confirmation by the user).
-1. Be runnable outside of a Docker environment, but only by the user's choice
-1. Implement ASCII art
+1. Implement ASCII art :-)
